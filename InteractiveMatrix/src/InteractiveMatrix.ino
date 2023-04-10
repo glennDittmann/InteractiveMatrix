@@ -1,8 +1,8 @@
-#include "InteractiveMatrix.h"
 #include <FastLED.h>
-#include "pzim3x520pt7b.h"
-#include "three_to_five0pt7b.h"
-#include "three_to_five5pt7b.h"
+#include "InteractiveMatrix.h"
+#include "fonts/pzim3x520pt7b.h"
+#include "fonts/three_to_five0pt7b.h"
+#include "fonts/three_to_five5pt7b.h"
 
 #define PIN 6
 #define matrix_width 17
