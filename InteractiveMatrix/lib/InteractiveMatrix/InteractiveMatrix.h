@@ -3,15 +3,6 @@
 
 #include <FastLED_NeoMatrix.h>
 
-// @TODO: when creating an InteractiveMatrix specify periphery objects, e.g. controller (maybe setter functions, e.g. matrix->setController())
-
-// DOCUMENTATION from other classes down the inheritance tree
-// -------------------------------------------------------------------------------------------------------------------
-// drawing functions, e.g. fillRect: https://github.com/adafruit/Adafruit-GFX-Library/blob/master/Adafruit_GFX.h
-// for description of the macros, that describe the matrix build, see: https://github.com/adafruit/Adafruit_NeoMatrix/blob/master/Adafruit_NeoMatrix.h
-// online tool for ttf to gfx readable font header: https://rop.nl/truetype2gfx/
-// -------------------------------------------------------------------------------------------------------------------
-
 // arduino pins for analog reads of x and y directions
 #define ANAL_X 0
 #define ANAL_Y 1
