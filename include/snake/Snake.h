@@ -74,10 +74,10 @@ template<uint16_t max_len>
                 this->head.y += 1;
                 break;
             case RIGHT:
-                this->head.x += 1;
+                this->head.x -= 1;
                 break;
             case LEFT:
-                this->head.x -= 1;
+                this->head.x += 1;
                 break;
         }
       }

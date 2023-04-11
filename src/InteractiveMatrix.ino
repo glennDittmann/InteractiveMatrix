@@ -1,24 +1,22 @@
-#include <InteractiveMatrix.h>
-#include <three_to_five5pt7b.h>
-#include "Snake.h"
-#include "Fruit.h"
 #include <FastLED.h>
+#include "InteractiveMatrix.h"
+#include "consts/Protoype450Consts.h"
+#include "snake/Snake.h"
+#include "snake/Fruit.h"
+#include "fonts/three_to_five5pt7b.h"
 
 #define PIN 6
-#define matrix_width 17
-#define matrix_height 12
-#define N_PIXELS (matrix_width * matrix_height)
-
 
 CRGB matrixleds[N_PIXELS];
-InteractiveMatrix *matrix = new InteractiveMatrix(matrixleds, matrix_width, matrix_height, 
-                                                  NEO_MATRIX_TOP + NEO_MATRIX_LEFT + NEO_MATRIX_ROWS + NEO_MATRIX_ZIGZAG);
+InteractiveMatrix *matrix = new InteractiveMatrix(matrixleds, N_PIXELS_HORIZONTAL, N_PIXELS_VERTICAL, MATRIX_TYPE);
 
 Snake< N_PIXELS > *snake = new Snake< N_PIXELS >(8, 5, matrix, 2);
 Fruit *fruit = new Fruit(matrix);
-
 uint16_t currentScore = 0;
 uint16_t highScore = 0;
+
+const uint16_t colors[] = {
+  matrix->Color(255, 0, 0), matrix->Color(0, 255, 0), matrix->Color(0, 0, 255) };
 
 void setup() {
   pinMode(TRIGGER, INPUT_PULLUP);
@@ -33,6 +31,7 @@ void setup() {
   matrix->show();
 }
 
+
 void loop() {
   snake->move();
   snake->draw(); // TODO check this implementation
@@ -46,7 +45,7 @@ void loop() {
         }
         
         matrix->setCursor(1, 4);
-        matrix->print("You  " + String(currentScore));
+        matrix->print("You  \n" + String(currentScore));
         
         matrix->show();
         delay(1250);
@@ -55,7 +54,7 @@ void loop() {
         matrix->show();
 
         matrix->setCursor(1, 4);
-        matrix->print("Top  " + String(highScore));
+        matrix->print("Top  \n" + String(highScore));
         matrix->show();
         delay(1250);
         matrix->clear();

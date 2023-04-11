@@ -1,18 +1,67 @@
+//
+// !!! WARNING !!! AUTO-GENERATED FILE!
+// PLEASE DO NOT MODIFY IT AND USE "platformio.ini":
+// https://docs.platformio.org/page/projectconf/section_env_build.html#build-flags
+//
 {
     "configurations": [
         {
-            "name": "Mac",
+            "name": "PlatformIO",
             "includePath": [
-                "${workspaceFolder}/**"
+                "/Users/glenn/Dev/embedded-projects/InteractiveMatrix/include",
+                "/Users/glenn/Dev/embedded-projects/InteractiveMatrix/src",
+                "/Users/glenn/Dev/embedded-projects/InteractiveMatrix/lib/InteractiveMatrix",
+                "/Users/glenn/Dev/embedded-projects/InteractiveMatrix/.pio/libdeps/megaatmega2560/FastLED NeoMatrix",
+                "/Users/glenn/Dev/embedded-projects/InteractiveMatrix/.pio/libdeps/megaatmega2560/Framebuffer GFX",
+                "/Users/glenn/Dev/embedded-projects/InteractiveMatrix/.pio/libdeps/megaatmega2560/Adafruit GFX Library",
+                "/Users/glenn/Dev/embedded-projects/InteractiveMatrix/.pio/libdeps/megaatmega2560/Adafruit BusIO",
+                "/Users/glenn/.platformio/packages/framework-arduino-avr/libraries/Wire/src",
+                "/Users/glenn/Dev/embedded-projects/InteractiveMatrix/.pio/libdeps/megaatmega2560/FastLED/src",
+                "/Users/glenn/.platformio/packages/framework-arduino-avr/libraries/SPI/src",
+                "/Users/glenn/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src",
+                "/Users/glenn/.platformio/packages/framework-arduino-avr/cores/arduino",
+                "/Users/glenn/.platformio/packages/framework-arduino-avr/variants/mega",
+                "/Users/glenn/.platformio/packages/framework-arduino-avr/libraries/EEPROM/src",
+                "/Users/glenn/.platformio/packages/framework-arduino-avr/libraries/HID/src",
+                ""
             ],
-            "defines": [],
-            "macFrameworkPath": [
-                "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks"
+            "browse": {
+                "limitSymbolsToIncludedHeaders": true,
+                "path": [
+                    "/Users/glenn/Dev/embedded-projects/InteractiveMatrix/include",
+                    "/Users/glenn/Dev/embedded-projects/InteractiveMatrix/src",
+                    "/Users/glenn/Dev/embedded-projects/InteractiveMatrix/lib/InteractiveMatrix",
+                    "/Users/glenn/Dev/embedded-projects/InteractiveMatrix/.pio/libdeps/megaatmega2560/FastLED NeoMatrix",
+                    "/Users/glenn/Dev/embedded-projects/InteractiveMatrix/.pio/libdeps/megaatmega2560/Framebuffer GFX",
+                    "/Users/glenn/Dev/embedded-projects/InteractiveMatrix/.pio/libdeps/megaatmega2560/Adafruit GFX Library",
+                    "/Users/glenn/Dev/embedded-projects/InteractiveMatrix/.pio/libdeps/megaatmega2560/Adafruit BusIO",
+                    "/Users/glenn/.platformio/packages/framework-arduino-avr/libraries/Wire/src",
+                    "/Users/glenn/Dev/embedded-projects/InteractiveMatrix/.pio/libdeps/megaatmega2560/FastLED/src",
+                    "/Users/glenn/.platformio/packages/framework-arduino-avr/libraries/SPI/src",
+                    "/Users/glenn/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src",
+                    "/Users/glenn/.platformio/packages/framework-arduino-avr/cores/arduino",
+                    "/Users/glenn/.platformio/packages/framework-arduino-avr/variants/mega",
+                    "/Users/glenn/.platformio/packages/framework-arduino-avr/libraries/EEPROM/src",
+                    "/Users/glenn/.platformio/packages/framework-arduino-avr/libraries/HID/src",
+                    ""
+                ]
+            },
+            "defines": [
+                "PLATFORMIO=60106",
+                "ARDUINO_AVR_MEGA2560",
+                "F_CPU=16000000L",
+                "ARDUINO_ARCH_AVR",
+                "ARDUINO=10808",
+                "__AVR_ATmega2560__",
+                ""
             ],
-            "compilerPath": "/usr/bin/clang",
-            "cStandard": "c17",
-            "cppStandard": "c++17",
-            "intelliSenseMode": "macos-clang-x64"
+            "cStandard": "c11",
+            "cppStandard": "c++11",
+            "compilerPath": "/Users/glenn/.platformio/packages/toolchain-atmelavr/bin/avr-gcc",
+            "compilerArgs": [
+                "-mmcu=atmega2560",
+                ""
+            ]
         }
     ],
     "version": 4
