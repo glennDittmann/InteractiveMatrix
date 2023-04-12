@@ -5,7 +5,7 @@ An embedded c++ platformio project for a low resolution interactive screen made 
 ### Microcontroller
   - Arduino Mega 2560
 
-### Proprietary 
+### Periphery 
   - Adafruit LED strips
   - Joystick
   - rotary switch
