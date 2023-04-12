@@ -1,5 +1,5 @@
 # InteractiveMatrix
-An embedded c++ project for a low resolution interactive screen made from LED-strips.
+An embedded c++ platformio project for a low resolution interactive screen made from LED-strips.
 
 ## Hardware
 ### Microcontroller
@@ -7,43 +7,49 @@ An embedded c++ project for a low resolution interactive screen made from LED-st
 
 ### Proprietary 
   - Adafruit LED strips
-  - Joystick: 
+  - Joystick
+  - rotary switch
+  - SD card reader 
 
-##  Project Structure
-Each subfolder iteself is a *platformio* project with its own README, explaining setup, functionality and dependencies. <br>
-*InterActive* is the main library setting up all hardware components (led strips, microcontroller, ) to be controlled. <br>
-Each other folder is a project using the main library *InterActive Matrix*, e.g. *SnakeGame* renders the classic snake game on the "screen". 
-```sh
-pmlab-lite
- ├── InteractiveMatrix
- │     ├── ...
- │     └── ...
- ├── SnakeGame
- │     ├── ...
- │     └── ...
- ├── .gitignore
- └── README.md
-```
-### InterActive Matrix
-Main library ...
+## Wiring Table
+| Label        | From      | To         | Description |
+|--------------|-----------|------------|-------------|
+| 1            | source    | dest       | can do magic|
+| 2            | source    | dest       | is invisible|
 
-### SnakeGame
-Implementation of the classical snake game.
+## Dependencies
+These should bes resolved via the Platformio library manager.
+ - [FastLED_NeoMatrix](https://github.com/marcmerlin/FastLED_NeoMatrix)
 
 ## Pictures
 Add pictures or gifs from the project here.
 
-## Cheatsheet
-  - Wiring: 
-
-# InteractiveMatrix
-## TODO
-  - when creating an InteractiveMatrix specify periphery objects, e.g. controller (maybe setter functions, e.g. matrix->setController())
-
-## Dependencies
- - [FastLED_NeoMatrix](https://github.com/marcmerlin/FastLED_NeoMatrix)
-
 ## Chatsheet
+### Useful Links
   - [GFX drawing functions](https://github.com/adafruit/Adafruit-GFX-Library/blob/master/Adafruit_GFX.h), e.g. fillRect
   - [description of the macros](https://github.com/adafruit/Adafruit_NeoMatrix/blob/master/Adafruit_NeoMatrix.h), that describe the matrix built
-  - [online tool](https://rop.nl/truetype2gfx/) for ttf to gfx readable font header: 
+  - [online tool](https://rop.nl/truetype2gfx/) for ttf to gfx readable font header
+
+###  Project Structure
+```sh
+InteractiveMatrix
+ ├── .pio     # external libraries, managed by PIO
+ ├── include  # project header files
+ │    ├── consts  # e.g. configuration for different hardware prototypes
+ │    ├── fonts   # bitmap encoded fonts
+ │    ├── snake   # code with snake game components
+ │    └── README.md
+ ├── lib  # project specific (private) libraries
+ │    ├── ... 
+ │    ├── InteractiveMatrix   # builds on FastLED for our specific use case
+ │    └── README.md
+ ├── src
+ │    └── InteractiveMatrix.ino   # main application
+ ├── test
+ ├── .gitignore
+ ├── platformio.ini  # project metadata
+ └── README.md
+```
+
+## TODO
+- [ ] when creating an InteractiveMatrix specify periphery objects, e.g. controller (maybe setter functions, e.g. matrix->setController())
