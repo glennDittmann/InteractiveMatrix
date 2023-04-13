@@ -12,10 +12,23 @@ An embedded c++ platformio project for a low resolution interactive screen made 
   - SD card reader 
 
 ## Wiring Table
-| Label        | From      | To         | Description |
-|--------------|-----------|------------|-------------|
-| 1            | source    | dest       | can do magic|
-| 2            | source    | dest       | is invisible|
+| Label        | From         | To  | Description |
+|--------------|--------------|-----|--------------------------------------------------|
+| 1            | +            | 5V  | serves microcontroller with power                |
+| 2            | -            | GND | microcontroller ground current                   |
+| 3            | LED          | 6   | information flow between LED and microcontroller |
+| 4            | LED          | -   | serves LED with power                            |
+| 5            | power supply | -   | main current source                              |
+| 6            | power supply | +   | ground current source                            |
+| 7            | joystick     | -   | serves joystick with power                       |
+| 8            | joystick     | +   | joystick ground current                          |
+| 9            | joystick     | A0  | joystick x                                       |
+| 10           | joystick     | A1  | joystick y                                       |
+| 11           | joystick     | A3  | joystick trigger                                 |
+| 12           | joystick     | A4  | joystick buttons                                 |
+
++: refers to the 5V line on the breadboard <br>
+-: refers to the common ground line on the breadboard
 
 ## Dependencies
 These should bes resolved via the Platformio library manager.
