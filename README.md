@@ -17,8 +17,8 @@ An embedded c++ platformio project for a low resolution interactive screen made 
 | 1            | +            | 5V  | serves microcontroller with power                |
 | 2            | -            | GND | microcontroller ground current                   |
 | 3            | LED          | 6   | information flow between LED and microcontroller |
-| 4            | LED          | -   | serves LED with power                            |
-| 5            | power supply | -   | main current source                              |
+| 4            | LED          | -   | LED ground current                               |
+| 5            | power supply | -   | 5V current source                                |
 | 6            | power supply | +   | ground current source                            |
 | 7            | joystick     | -   | serves joystick with power                       |
 | 8            | joystick     | +   | joystick ground current                          |
